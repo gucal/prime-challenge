@@ -1,5 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
+interface Item {
+  id: number;
+  name: string;
+  icon: string;
+}
+
+interface MenuItem {
+  label: string;
+  items: Item[];
+}
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -10,7 +21,9 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  menuItems = [
+  selectedID: number = 1;
+
+  menuItems: MenuItem[] = [
     {
       label: 'Favorites',
       items: [
@@ -62,4 +75,8 @@ export class SidebarComponent implements OnInit {
       ],
     },
   ];
+
+  selectMenu(item: Item) {
+    this.selectedID = item.id;
+  }
 }
