@@ -16,6 +16,15 @@ interface Tag {
   text: string;
 }
 
+interface Product {
+  id: number;
+  name: string;
+  rate: number;
+  description: string;
+  price: number;
+  image: string;
+}
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -105,6 +114,33 @@ export class MainComponent implements OnInit {
       image: 'assets/images/item-5.png',
       totalPrice: 12345.0,
       reviews: 123,
+    },
+  ];
+
+  productList: Product[] = [
+    {
+      id: 1,
+      name: 'Natoque penatibus',
+      rate: 5,
+      description: 'Arcu felis bibendum ut tristique et egestas quis ipsum suspendisse.',
+      price: 123,
+      image: 'assets/images/product-1.png',
+    },
+    {
+      id: 2,
+      name: 'Ipsum a arcu',
+      rate: 5,
+      description: 'Arcu felis bibendum ut tristique et egestas quis ipsum suspendisse.',
+      price: 123,
+      image: 'assets/images/product-2.png',
+    },
+    {
+      id: 3,
+      name: 'Vulputate eu',
+      rate: 5,
+      description: 'Arcu felis bibendum ut tristique et egestas quis ipsum suspendisse.',
+      price: 123,
+      image: 'assets/images/product-3.png',
     },
   ];
 }
