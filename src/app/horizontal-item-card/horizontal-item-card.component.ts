@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-horizontal-item-card',
   templateUrl: './horizontal-item-card.component.html',
-  styleUrls: ['./horizontal-item-card.component.css']
+  styleUrls: ['./horizontal-item-card.component.css'],
 })
 export class HorizontalItemCardComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
+  @Input() itemInfo: any;
 }
