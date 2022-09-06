@@ -13,7 +13,13 @@
           <span>{{ tag.text }}</span>
         </div>
       </div>
-      <div>{{ itemInfo.rate }}</div>
+      <div>
+        <p-rating
+          [(ngModel)]="itemInfo.rate"
+          [readonly]="true"
+          [cancel]="false"
+        ></p-rating>
+      </div>
     </div>
   </div>
 
