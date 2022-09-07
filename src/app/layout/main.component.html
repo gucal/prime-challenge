@@ -6,10 +6,10 @@
       <span class="text-900 font-medium text-lg">Top Sales</span>
       <i class="pi pi-ellipsis-v cursor-pointer text-bluegray-500"></i>
     </div>
-    <app-horizontal-item-card
+    <app-horizontal-card
       *ngFor="let item of itemList"
       [itemInfo]="item"
-    ></app-horizontal-item-card>
+    ></app-horizontal-card>
   </div>
   <div class="mt-4 grid">
     <app-product-card

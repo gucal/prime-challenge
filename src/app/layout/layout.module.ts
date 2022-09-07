@@ -5,7 +5,7 @@ import { LayoutComponent } from './layout.component';
 import { TopbarComponent } from './topbar.component';
 import { SidebarComponent } from './sidebar.component';
 import { MainComponent } from './main.component';
-import { HorizontalItemCardComponent } from '../horizontal-item-card/horizontal-item-card.component';
+import { HorizontalCardComponent } from '../horizontal-card/horizontal-card.component';
 import { RatingModule } from 'primeng/rating';
 import { ProductCardComponent } from '../product-card/product-card.component';
 
@@ -15,7 +15,7 @@ import { ProductCardComponent } from '../product-card/product-card.component';
     TopbarComponent,
     SidebarComponent,
     MainComponent,
-    HorizontalItemCardComponent,
+    HorizontalCardComponent,
     ProductCardComponent,
   ],
   imports: [CommonModule, FormsModule, RatingModule],
