@@ -2,8 +2,14 @@
   <div>
     <app-sidebar [mobileSidebar]="isMobileMenu"></app-sidebar>
   </div>
-  <div class="flex-col w-full">
+
+  <div class="flex-col w-full relative">
+    <div
+      *ngIf="isMobileMenu"
+      (click)="isMobileMenu === true && collapseMenu(false)"
+      class="w-full h-full opened-mobile-menu absolute"
+    ></div>
     <app-topbar (collapseMenuClick)="collapseMenu(!isMobileMenu)"></app-topbar>
-    <app-main (click)="isMobileMenu === true && collapseMenu(false)"></app-main>
+    <app-main></app-main>
   </div>
 </div>
