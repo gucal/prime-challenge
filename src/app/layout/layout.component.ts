@@ -3,13 +3,16 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.css']
+  styleUrls: ['./layout.component.css'],
 })
 export class LayoutComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  isMobileMenu?: boolean = false;
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  collapseMenu() {
+    this.isMobileMenu = !this.isMobileMenu;
   }
-
 }
