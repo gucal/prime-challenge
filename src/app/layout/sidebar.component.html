@@ -1,5 +1,6 @@
 <div
-  class="flex-column py-3 pl-5 surface-0 h-screen fixed lg:sticky border-1 z-1 top-0 left-0 border-300"
+  class="flex-column py-3 pl-5 surface-0 h-screen fixed lg:sticky lg:block border-1 z-1 top-0 left-0 border-300"
+  [ngClass]="{ 'hidden lg:block': !mobileSidebar }"
   style="width: 280px"
 >
   <div>

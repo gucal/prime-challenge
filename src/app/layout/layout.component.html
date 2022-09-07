@@ -1,6 +1,6 @@
 <div class="flex">
   <div>
-    <app-sidebar *ngIf="isMobileMenu"></app-sidebar>
+    <app-sidebar [mobileSidebar]="isMobileMenu"></app-sidebar>
   </div>
   <div class="flex-col w-full">
     <app-topbar (collapseMenuClick)="collapseMenu()"></app-topbar>

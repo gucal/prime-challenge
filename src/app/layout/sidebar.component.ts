@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 interface Item {
   id: number;
@@ -20,6 +20,8 @@ export class SidebarComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  @Input() mobileSidebar?: boolean;
 
   selectedID: number = 1;
 
