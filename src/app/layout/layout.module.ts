@@ -7,7 +7,7 @@ import { SidebarComponent } from './sidebar.component';
 import { MainComponent } from './main.component';
 import { HorizontalCardComponent } from '../horizontal-card/horizontal-card.component';
 import { RatingModule } from 'primeng/rating';
-import { ProductCardComponent } from '../product-card/product-card.component';
+import { VerticalCardComponent } from '../vertical-card/vertical-card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { ProductCardComponent } from '../product-card/product-card.component';
     SidebarComponent,
     MainComponent,
     HorizontalCardComponent,
-    ProductCardComponent,
+    VerticalCardComponent,
   ],
   imports: [CommonModule, FormsModule, RatingModule],
 })
