@@ -12,7 +12,7 @@ export class LayoutComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  collapseMenu() {
-    this.isMobileMenu = true;
+  collapseMenu(isVisible: boolean) {
+    this.isMobileMenu = isVisible;
   }
 }

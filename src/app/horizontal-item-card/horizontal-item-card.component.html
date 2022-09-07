@@ -1,32 +1,36 @@
-<div class="flex justify-content-between mt-4">
-  <div class="flex gap-3">
-    <img width="78" height="78" [src]="itemInfo.image" alt="" />
-    <div class="flex flex-column justify-content-between">
-      <span class="text-900 font-medium text-lg">{{ itemInfo.title }}</span>
-      <div class="flex gap-3 align-items-center">
-        <span class="text-600 text-base">{{ itemInfo.brand }}</span>
-        <div
-          *ngFor="let tag of itemInfo.tags"
-          [ngClass]="tag.class"
-          class="text-sm p-1 border-round-sm"
-        >
-          <span>{{ tag.text }}</span>
+<div class="flex mt-4">
+  <div class="flex gap-3 w-full">
+    <img width="78px" height="100%" [src]="itemInfo.image" />
+
+    <div
+      class="flex flex-column gap-3 lg:flex-row justify-content-between lg:align-items-center w-full"
+    >
+      <div class="flex flex-column gap-2 justify-content-between h-full">
+        <span class="text-900 font-medium text-lg">{{ itemInfo.title }}</span>
+        <div class="flex gap-3 align-items-center">
+          <span class="text-600 text-base">{{ itemInfo.brand }}</span>
+          <div
+            *ngFor="let tag of itemInfo.tags"
+            [ngClass]="tag.class"
+            class="text-sm p-1 border-round-sm"
+          >
+            <span>{{ tag.text }}</span>
+          </div>
+        </div>
+        <div>
+          <p-rating
+            [(ngModel)]="itemInfo.rate"
+            [readonly]="true"
+            [cancel]="false"
+          ></p-rating>
         </div>
       </div>
-      <div>
-        <p-rating
-          [(ngModel)]="itemInfo.rate"
-          [readonly]="true"
-          [cancel]="false"
-        ></p-rating>
+      <div class="flex flex-column lg:justify-content-center gap-2">
+        <span class="font-medium text-900 text-lg"
+          >${{ itemInfo.totalPrice.toFixed(2) }}</span
+        >
+        <span class="text-sm text-600">{{ itemInfo.reviews }}K Reviews</span>
       </div>
     </div>
-  </div>
-
-  <div class="flex flex-column justify-content-center gap-2">
-    <span class="font-medium text-900 text-lg"
-      >${{ itemInfo.totalPrice.toFixed(2) }}</span
-    >
-    <span class="text-sm text-600">{{ itemInfo.reviews }}K Reviews</span>
   </div>
 </div>

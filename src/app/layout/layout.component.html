@@ -3,7 +3,7 @@
     <app-sidebar [mobileSidebar]="isMobileMenu"></app-sidebar>
   </div>
   <div class="flex-col w-full">
-    <app-topbar (collapseMenuClick)="collapseMenu()"></app-topbar>
-    <app-main></app-main>
+    <app-topbar (collapseMenuClick)="collapseMenu(!isMobileMenu)"></app-topbar>
+    <app-main (click)="isMobileMenu === true && collapseMenu(false)"></app-main>
   </div>
 </div>
